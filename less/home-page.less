@@ -1,0 +1,130 @@
+// Home Page Styles here
+
+.home {
+  /* Split the screen in half */
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    h2 {
+      color: @prim;
+    }
+  }
+
+  .menu-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: @dark;
+    border-radius: 50%;
+    z-index: 2;
+
+    i {
+      color: @light;
+    }
+  }
+
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: -3;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: @light;
+  }
+
+  /* Control the right side */
+  .right {
+    right: 0;
+    height: 100vh;
+    background-image: url("/img/mountain-alps.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+
+    .frosted-box {
+      width: 80%;
+      padding: 20px;
+      border-radius: 5px;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.4) 0%,
+        rgba(255, 255, 255, 0.7) 25%,
+        rgba(255, 255, 255, 0.7) 75%,
+        rgba(255, 255, 255, 0.4) 100%
+      );
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+        inset 0 0 1px rgba(255, 255, 255, 0.6);
+
+      backdrop-filter: blur(5px);
+    }
+  }
+
+  .grid {
+    width: 95%;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.7) 25%,
+      rgba(255, 255, 255, 0.7) 75%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+      inset 0 0 1px rgba(255, 255, 255, 0.6);
+    border-radius: 5px;
+
+    .grid-item {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      .icon-container {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          color: @prim;
+        }
+      }
+
+      .grid-text {
+        width: 60%;
+        color: black;
+      }
+    }
+  }
+
+  .about {
+    flex-direction: column;
+    .about-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}
