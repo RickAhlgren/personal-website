@@ -75,7 +75,7 @@
 
   // This code is for the heading of each section that overlaps the content of the section in question, accenting the heading with a colorful period
   .section-heading {
-    width: 100%;
+    width: 98%;
     color: @dark;
     transform: translateY(15px);
     z-index: 5;
@@ -113,7 +113,7 @@
     border-bottom-right-radius: 10px;
   }
 
-  // This code controls the
+  // This code controls the grid class
   .grid {
     width: 90%;
     height: 80vh;
@@ -129,6 +129,7 @@
       font-weight: 1000;
     }
 
+    // This code controls the individual items within the grid class
     .grid-item {
       width: 100%;
       display: flex;
@@ -150,6 +151,10 @@
     }
   }
 
+  // This code is for the About (BIO.) section
+  // The goal for this section is to reveal a few details about me and my work history
+  // This will link to a more in-depth About page
+  // Buttons at the bottom should be for Resume AND Learn More
   #about {
     height: 100vh;
     flex-direction: column;
@@ -164,7 +169,16 @@
         i {
           width: 18px;
           text-align: center;
+          color: black;
+        }
+
+        .fa-heart {
           color: @prim;
+        }
+
+        .emph-text {
+          font-weight: 1000;
+          color: black;
         }
       }
     }
@@ -181,8 +195,80 @@
     }
   }
 
+  // Here is the code for the portfolio (WORK.) section
+  // The goal with this section is to highlight a few of the projects I've worked on
+  // Keep design simple and in line with the rest of the page
+  // Create a separate page that lists all of my work in aesthetically pleasing grid
+  #work {
+    margin: 20px 0;
+    .portfolio {
+      width: 90vw;
+      margin: 0 auto;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      .portfolio-piece {
+        height: 90vh;
+        padding: 30px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        p {
+          text-align: center;
+        }
+
+        h2 {
+          text-align: center;
+          font-size: 2.5rem;
+        }
+
+        i {
+          text-align: center;
+        }
+
+        span {
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+
+      .odd {
+        background: @light;
+
+        i {
+          color: @sec;
+        }
+
+        span {
+          i {
+            color: @dark;
+          }
+        }
+      }
+
+      .even {
+        background: @dark;
+        h2 {
+          color: white;
+        }
+
+        i {
+          color: @sec;
+        }
+
+        p {
+          color: @light;
+        }
+
+        span {
+          i {
+            color: @light;
+          }
+        }
+      }
+    }
+  }
+
   #contact {
-    height: 70vh;
+    height: 75vh;
     .contact-box {
       height: 90%;
       width: 100vw;
@@ -206,19 +292,22 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: flex-start;
+          align-items: center;
 
           a {
-            text-decoration: underline;
+            color: @prim;
+            font-weight: 1000;
           }
 
           span {
             width: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
             div {
-              width: 30%;
+              width: 33%;
+              text-align: center;
             }
           }
         }
