@@ -116,7 +116,6 @@
   // This code controls the grid class
   .grid {
     width: 90%;
-    height: 80vh;
     margin: 0 auto;
     padding: 10px;
     display: flex;
@@ -125,13 +124,23 @@
     border-bottom-right-radius: 10px;
     z-index: 0;
 
+    @media (orientation: landscape) {
+      height: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .grid-item {
+        width: 50%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
     h3 {
       font-weight: 1000;
     }
 
     // This code controls the individual items within the grid class
     .grid-item {
-      width: 100%;
       display: flex;
       flex-direction: row;
       .icon-container {
@@ -156,7 +165,6 @@
   // This will link to a more in-depth About page
   // Buttons at the bottom should be for Resume AND Learn More
   #about {
-    height: 100vh;
     flex-direction: column;
     .about-box {
       width: 90vw;
@@ -165,7 +173,7 @@
       justify-content: space-around;
       border-bottom-right-radius: 10px;
       .bio-box {
-        margin: 15px;
+        padding: 15px;
         i {
           width: 18px;
           text-align: center;
@@ -181,6 +189,34 @@
           color: black;
         }
       }
+
+      // Here is the code for base resolution (iPhone SE) landscape orientation
+      @media (orientation: landscape) {
+        height: 100%;
+        flex-direction: row;
+        justify-content: center;
+        p {
+          font-size: 1.4rem;
+        }
+        .border-accent {
+          display: none;
+        }
+        .bio-box {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .button-box-portrait {
+          display: none;
+        }
+
+        .button-box-landscape {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
     }
 
     .border-accent {
@@ -189,9 +225,13 @@
       border-bottom: 1px solid @prim;
     }
 
-    .button-box {
+    .button-box-portrait {
       display: flex;
       justify-content: flex-end;
+    }
+
+    .button-box-landscape {
+      display: none;
     }
   }
 
@@ -200,17 +240,17 @@
   // Keep design simple and in line with the rest of the page
   // Create a separate page that lists all of my work in aesthetically pleasing grid
   #work {
-    margin: 20px 0;
+    margin: 20px 0 40px;
     .portfolio {
       width: 90vw;
       margin: 0 auto;
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
       .portfolio-piece {
         height: 90vh;
-        padding: 30px 15px;
+        padding: 15px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         p {
           text-align: center;
         }
@@ -227,6 +267,13 @@
         span {
           display: flex;
           justify-content: space-around;
+
+          @media (orientation: landscape) {
+            justify-content: flex-end;
+            i {
+              width: 15%;
+            }
+          }
         }
       }
 
@@ -267,6 +314,7 @@
     }
   }
 
+  // Here is the code for the contact (CONTACT.) section
   #contact {
     height: 75vh;
     .contact-box {
@@ -279,16 +327,15 @@
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid white;
-        div {
-          width: 50%;
-        }
         .contact-category-title {
+          width: 50%;
           display: flex;
           justify-content: center;
           align-items: center;
         }
 
         .contact-category-text {
+          width: 50%;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -305,13 +352,20 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            div {
+            .social-icon {
               width: 33%;
               text-align: center;
+              @media (orientation: landscape) {
+                width: 20%;
+              }
             }
           }
         }
       }
+    }
+
+    @media (orientation: landscape) {
+      height: 100vh;
     }
   }
 }

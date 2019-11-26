@@ -293,7 +293,6 @@ footer span img {
 }
 .home .grid {
   width: 90%;
-  height: 80vh;
   margin: 0 auto;
   padding: 10px;
   display: flex;
@@ -302,11 +301,22 @@ footer span img {
   border-bottom-right-radius: 10px;
   z-index: 0;
 }
+@media (orientation: landscape) {
+  .home .grid {
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .home .grid .grid-item {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+}
 .home .grid h3 {
   font-weight: 1000;
 }
 .home .grid .grid-item {
-  width: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -324,7 +334,6 @@ footer span img {
   color: #2C3E50;
 }
 .home #about {
-  height: 100vh;
   flex-direction: column;
 }
 .home #about .about-box {
@@ -335,7 +344,7 @@ footer span img {
   border-bottom-right-radius: 10px;
 }
 .home #about .about-box .bio-box {
-  margin: 15px;
+  padding: 15px;
 }
 .home #about .about-box .bio-box i {
   width: 18px;
@@ -349,17 +358,46 @@ footer span img {
   font-weight: 1000;
   color: black;
 }
+@media (orientation: landscape) {
+  .home #about .about-box {
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .home #about .about-box p {
+    font-size: 1.4rem;
+  }
+  .home #about .about-box .border-accent {
+    display: none;
+  }
+  .home #about .about-box .bio-box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .home #about .about-box .button-box-portrait {
+    display: none;
+  }
+  .home #about .about-box .button-box-landscape {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 .home #about .border-accent {
   width: 25%;
   margin: 0 auto;
   border-bottom: 1px solid #E74C3C;
 }
-.home #about .button-box {
+.home #about .button-box-portrait {
   display: flex;
   justify-content: flex-end;
 }
+.home #about .button-box-landscape {
+  display: none;
+}
 .home #work {
-  margin: 20px 0;
+  margin: 20px 0 40px;
 }
 .home #work .portfolio {
   width: 90vw;
@@ -368,10 +406,10 @@ footer span img {
 }
 .home #work .portfolio .portfolio-piece {
   height: 90vh;
-  padding: 30px 15px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .home #work .portfolio .portfolio-piece p {
   text-align: center;
@@ -386,6 +424,14 @@ footer span img {
 .home #work .portfolio .portfolio-piece span {
   display: flex;
   justify-content: space-around;
+}
+@media (orientation: landscape) {
+  .home #work .portfolio .portfolio-piece span {
+    justify-content: flex-end;
+  }
+  .home #work .portfolio .portfolio-piece span i {
+    width: 15%;
+  }
 }
 .home #work .portfolio .odd {
   background: #ECF0F1;
@@ -426,15 +472,14 @@ footer span img {
   flex-direction: row;
   border-bottom: 1px solid white;
 }
-.home #contact .contact-box .individual-contact-info div {
-  width: 50%;
-}
 .home #contact .contact-box .individual-contact-info .contact-category-title {
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .home #contact .contact-box .individual-contact-info .contact-category-text {
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -451,7 +496,17 @@ footer span img {
   align-items: center;
   flex-wrap: wrap;
 }
-.home #contact .contact-box .individual-contact-info .contact-category-text span div {
+.home #contact .contact-box .individual-contact-info .contact-category-text span .social-icon {
   width: 33%;
   text-align: center;
+}
+@media (orientation: landscape) {
+  .home #contact .contact-box .individual-contact-info .contact-category-text span .social-icon {
+    width: 20%;
+  }
+}
+@media (orientation: landscape) {
+  .home #contact {
+    height: 100vh;
+  }
 }
