@@ -64,12 +64,13 @@
     background-size: cover;
   }
 
+  // Here is the code for the red button
   .button {
     padding: 8px 24px;
     font-size: larger;
     border-radius: 5px;
     background: @prim;
-    color: @light;
+    color: white;
     font-weight: 1000;
   }
 
@@ -113,8 +114,9 @@
     border-bottom-right-radius: 10px;
   }
 
-  // This code controls the grid class
+  // This code controls the grid class (EXPLORE. section)
   .grid {
+    height: 70%;
     width: 90%;
     margin: 0 auto;
     padding: 10px;
@@ -125,7 +127,6 @@
     z-index: 0;
 
     @media (orientation: landscape) {
-      height: 100%;
       flex-direction: row;
       flex-wrap: wrap;
       .grid-item {
@@ -165,15 +166,20 @@
   // This will link to a more in-depth About page
   // Buttons at the bottom should be for Resume AND Learn More
   #about {
-    flex-direction: column;
+    height: 100vh;
     .about-box {
+      height: 80%;
       width: 90vw;
       display: flex;
       flex-direction: column-reverse;
-      justify-content: space-around;
+      align-content: space-around;
       border-bottom-right-radius: 10px;
       .bio-box {
+        height: 90%;
         padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         i {
           width: 18px;
           text-align: center;
@@ -202,6 +208,7 @@
           display: none;
         }
         .bio-box {
+          height: 100%;
           width: 50%;
           display: flex;
           flex-direction: column;
@@ -250,7 +257,7 @@
         padding: 15px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         p {
           text-align: center;
         }

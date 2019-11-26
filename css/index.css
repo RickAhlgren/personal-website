@@ -138,7 +138,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 h2 {
   font-size: 2rem;
@@ -262,7 +262,7 @@ footer span img {
   font-size: larger;
   border-radius: 5px;
   background: #E74C3C;
-  color: #ECF0F1;
+  color: white;
   font-weight: 1000;
 }
 .home .section-heading {
@@ -292,6 +292,7 @@ footer span img {
   border-bottom-right-radius: 10px;
 }
 .home .grid {
+  height: 70%;
   width: 90%;
   margin: 0 auto;
   padding: 10px;
@@ -303,7 +304,6 @@ footer span img {
 }
 @media (orientation: landscape) {
   .home .grid {
-    height: 100%;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -334,17 +334,22 @@ footer span img {
   color: #2C3E50;
 }
 .home #about {
-  flex-direction: column;
+  height: 100vh;
 }
 .home #about .about-box {
+  height: 80%;
   width: 90vw;
   display: flex;
   flex-direction: column-reverse;
-  justify-content: space-around;
+  align-content: space-around;
   border-bottom-right-radius: 10px;
 }
 .home #about .about-box .bio-box {
+  height: 90%;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .home #about .about-box .bio-box i {
   width: 18px;
@@ -371,6 +376,7 @@ footer span img {
     display: none;
   }
   .home #about .about-box .bio-box {
+    height: 100%;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -409,7 +415,7 @@ footer span img {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .home #work .portfolio .portfolio-piece p {
   text-align: center;
