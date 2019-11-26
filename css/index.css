@@ -210,6 +210,15 @@ footer span img {
 .home .logo h2 {
   color: #E74C3C;
 }
+.home .logo p {
+  color: #2C3E50;
+}
+.home .fa-long-arrow-alt-down {
+  color: #E74C3C;
+  position: absolute;
+  left: 5%;
+  bottom: 3%;
+}
 .home .menu-icon {
   position: fixed;
   top: 10px;
@@ -244,33 +253,46 @@ footer span img {
   background-attachment: fixed;
   background-size: cover;
 }
+.home .section-heading {
+  width: 100%;
+  color: #2C3E50;
+  padding-left: 5px;
+  transform: translateY(15px);
+  z-index: 5;
+}
+.home .section-heading .accent-punctuation {
+  color: #E74C3C;
+}
 .home .container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 0;
 }
-.home .container .frosted-box {
-  width: 80%;
-  padding: 20px;
+.home .container .frosted {
   border-radius: 5px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.7) 25%, rgba(255, 255, 255, 0.7) 75%, rgba(255, 255, 255, 0.4) 100%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(5px);
 }
+.home .container .welcome-textbox {
+  width: 80%;
+  padding: 20px;
+}
 .home .grid {
-  width: 95%;
+  width: 90%;
   height: 80vh;
   margin: 0 auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  backdrop-filter: blur(5px);
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.7) 25%, rgba(255, 255, 255, 0.7) 75%, rgba(255, 255, 255, 0.4) 100%);
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
   border-radius: 5px;
+  z-index: 0;
+}
+.home .grid h3 {
+  font-weight: 1000;
 }
 .home .grid .grid-item {
   width: 100%;
@@ -288,13 +310,29 @@ footer span img {
 }
 .home .grid .grid-item .grid-text {
   width: 60%;
-  color: black;
+  color: #3b3939;
 }
-.home .about {
+.home #about {
+  height: 100vh;
   flex-direction: column;
 }
-.home .about .about-box {
+.home #about .about-box {
+  width: 90vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-around;
+  padding: 10px;
+}
+.home #about .about-box .bio-box {
+  margin: 10px 0 10px;
+}
+.home #about .about-box .bio-box i {
+  width: 18px;
+  text-align: center;
+  color: #E74C3C;
+}
+.home #about .border-accent {
+  width: 25%;
+  margin: 0 auto;
+  border-bottom: 2px solid #E74C3C;
 }

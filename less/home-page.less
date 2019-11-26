@@ -1,8 +1,6 @@
 // Home Page Styles here
 
 .home {
-  /* Split the screen in half */
-
   .logo {
     position: absolute;
     top: 10px;
@@ -10,6 +8,16 @@
     h2 {
       color: @prim;
     }
+    p {
+      color: @dark;
+    }
+  }
+
+  .fa-long-arrow-alt-down {
+    color: @prim;
+    position: absolute;
+    left: 5%;
+    bottom: 3%;
   }
 
   .menu-icon {
@@ -25,7 +33,7 @@
       color: @light;
     }
   }
-
+  /* Split the screen in half */
   .split {
     height: 100%;
     width: 50%;
@@ -53,16 +61,26 @@
     background-size: cover;
   }
 
+  .section-heading {
+    width: 100%;
+    color: @dark;
+    padding-left: 5px;
+    transform: translateY(15px);
+    z-index: 5;
+
+    .accent-punctuation {
+      color: @prim;
+    }
+  }
+
   .container {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 0;
 
-    .frosted-box {
-      width: 80%;
-      padding: 20px;
+    .frosted {
       border-radius: 5px;
       background: linear-gradient(
         90deg,
@@ -76,27 +94,27 @@
 
       backdrop-filter: blur(5px);
     }
+
+    .welcome-textbox {
+      width: 80%;
+      padding: 20px;
+    }
   }
 
   .grid {
-    width: 95%;
+    width: 90%;
     height: 80vh;
     margin: 0 auto;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    backdrop-filter: blur(5px);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.4) 0%,
-      rgba(255, 255, 255, 0.7) 25%,
-      rgba(255, 255, 255, 0.7) 75%,
-      rgba(255, 255, 255, 0.4) 100%
-    );
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-      inset 0 0 1px rgba(255, 255, 255, 0.6);
     border-radius: 5px;
+    z-index: 0;
+
+    h3 {
+      font-weight: 1000;
+    }
 
     .grid-item {
       width: 100%;
@@ -114,17 +132,34 @@
 
       .grid-text {
         width: 60%;
-        color: black;
+        color: rgb(59, 57, 57);
       }
     }
   }
 
-  .about {
+  #about {
+    height: 100vh;
     flex-direction: column;
     .about-box {
+      width: 90vw;
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: space-around;
+      padding: 10px;
+      .bio-box {
+        margin: 10px 0 10px;
+        i {
+          width: 18px;
+          text-align: center;
+          color: @prim;
+        }
+      }
+    }
+
+    .border-accent {
+      width: 25%;
+      margin: 0 auto;
+      border-bottom: 2px solid @prim;
     }
   }
 }
