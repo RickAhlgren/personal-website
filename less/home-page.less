@@ -166,79 +166,45 @@
   // This will link to a more in-depth About page
   // Buttons at the bottom should be for Resume AND Learn More
   #about {
-    height: 100vh;
+    height: 300vh;
     .about-box {
-      height: 80%;
-      width: 90vw;
+      padding: 15px 0 15px 15px;
       display: flex;
-      flex-direction: column-reverse;
-      align-content: space-around;
-      border-bottom-right-radius: 10px;
-      .bio-box {
-        height: 90%;
+      justify-content: space-between;
+
+      .timeline-container {
+        width: 45%;
+        display: flex;
+        flex-wrap: wrap;
+        .time-line {
+          width: 5%;
+          border-left: 2px solid @prim;
+          border-top: 2px solid @prim;
+        }
+        .timeline-text {
+          width: 95%;
+          padding-left: 5px;
+        }
+      }
+      .about-stats {
+        height: 400px;
+        width: 45%;
         padding: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        i {
-          width: 18px;
-          text-align: center;
-          color: black;
-        }
+
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
 
         .fa-heart {
           color: @prim;
         }
-
-        .emph-text {
-          font-weight: 1000;
-          color: black;
-        }
       }
-
-      // Here is the code for base resolution (iPhone SE) landscape orientation
-      @media (orientation: landscape) {
-        height: 100%;
-        flex-direction: row;
-        justify-content: center;
-        p {
-          font-size: 1.4rem;
-        }
-        .border-accent {
-          display: none;
-        }
-        .bio-box {
-          height: 100%;
-          width: 50%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-
-        .button-box-portrait {
-          display: none;
-        }
-
-        .button-box-landscape {
-          display: flex;
-          justify-content: flex-end;
-        }
-      }
-    }
-
-    .border-accent {
-      width: 25%;
-      margin: 0 auto;
-      border-bottom: 1px solid @prim;
-    }
-
-    .button-box-portrait {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .button-box-landscape {
-      display: none;
     }
   }
 
