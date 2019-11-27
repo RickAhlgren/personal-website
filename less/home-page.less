@@ -57,14 +57,15 @@
   .right {
     right: 0;
     height: 100vh;
-    background-image: url("../img/mountain-alps.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: @prim;
+    // background-image: url("../img/mountain-alps.jpg");
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-attachment: scroll;
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
   }
 
   // Here is the code for the red button
@@ -98,13 +99,14 @@
   }
 
   .frosted {
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(255, 255, 255, 0.6) 25%,
-      rgba(255, 255, 255, 0.6) 75%,
-      rgba(255, 255, 255, 0.5) 100%
-    );
+    background: white;
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(255, 255, 255, 0.5) 0%,
+    //   rgba(255, 255, 255, 0.6) 25%,
+    //   rgba(255, 255, 255, 0.6) 75%,
+    //   rgba(255, 255, 255, 0.5) 100%
+    // );
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
       inset 0 0 1px rgba(255, 255, 255, 0.6);
 
@@ -194,14 +196,15 @@
         height: 65vh;
         width: 45%;
         padding: 10px 5px 10px 10px;
-        border-top-left-radius: 15px;
-        border-bottom-left-radius: 15px;
+        // border-top-left-radius: 15px;
+        // border-bottom-left-radius: 15px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        position: -webkit-sticky;
+        -webkit-position: sticky;
         position: sticky;
         top: 65px;
 
@@ -253,6 +256,7 @@
 
           @media (orientation: landscape) {
             justify-content: flex-end;
+            
             i {
               width: 15%;
             }
@@ -281,7 +285,7 @@
         }
 
         i {
-          color: @sec;
+          color: @light;
         }
 
         p {
@@ -309,7 +313,7 @@
         height: 25%;
         display: flex;
         flex-direction: row;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid @light;
         .contact-category-title {
           width: 50%;
           display: flex;
@@ -326,7 +330,6 @@
 
           a {
             color: @prim;
-            font-weight: 1000;
           }
 
           span {
