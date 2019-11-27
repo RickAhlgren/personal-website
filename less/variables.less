@@ -1,20 +1,30 @@
 // Variables in here
 
-// Color assignments 
+// Color assignments
 @font-color: @dark;
 @button-bg: @sec;
 @footer-bg: @tert;
 
 // Colors
 @dark: #2c3e50; // 44, 62, 80
-@prim: #E74C3C; // 231. 76, 60
-// @prim: #F23030; // 231. 76, 60
-@light: #ECF0F1; // 236, 240, 241
-@sec: #3498DB; // 52, 152, 219
-@tert: #2980B9; // 41, 128, 185
+@prim: #e74c3c; // 231. 76, 60
+@light: #ecf0f1; // 236, 240, 241
+@sec: #3498db; // 52, 152, 219
+@tert: #2980b9; // 41, 128, 185
 
 // Media Query Break Points
-@tablet-width: ~'(min-width: 570px)';
-@large-phone-height: ~'(min-height: )';
-@SD-display: ~'(min-width: 720px)';
-@HD-display: ~'(min-width: 1080px)';
+// Small devices (landscape phones, 576px and up)
+@small-devices: ~"(min-width: 576px)";
+@small-devices-height: ~"(min-height: 576px)";
+
+// Medium devices (tablets, 768px and up)
+@medium-devices: ~"(min-width: 768px)";
+@medium-devices-height: ~"(min-height: 768px)";
+
+// Large devices (desktops, 992px and up)
+@large-devices: ~"(min-width: 992px)";
+@large-devices-height: ~"(min-height: 992px)";
+
+// Extra large devices (large desktops, 1200px and up)
+@extra-large-devices: ~"(min-width: 1200px)";
+@extra-large-devices-height: ~"(min-width: 1200px)";

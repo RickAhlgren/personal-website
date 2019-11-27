@@ -3,8 +3,8 @@
 .home {
   .logo {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 1%;
+    left: 1%;
     h2 {
       color: @prim;
     }
@@ -17,8 +17,8 @@
   .scroll-arrow {
     color: @prim;
     position: absolute;
-    right: 5%;
-    bottom: 3%;
+    right: 14px;
+    bottom: 10px;
   }
 
   // This is the code for the floating button in the top right corner
@@ -57,15 +57,15 @@
   .right {
     right: 0;
     height: 100vh;
-    background-color: @prim;
-    // background-image: url("../img/mountain-alps.jpg");
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-attachment: scroll;
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-    // background-size: cover;
+    // background-color: #3ce77b;
+    background-image: url("../img/mountain-alps.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
   // Here is the code for the red button
@@ -82,16 +82,23 @@
   .section-heading {
     width: 95%;
     color: @dark;
-    transform: translateY(20px);
     z-index: 5;
+    transform: translateY(20px);
 
     .accent-punctuation {
       color: @prim;
     }
+    @media @small-devices {
+      width: 85%;
+    }
+  }
+
+  .welkum {
+    transform: translateY(-8%);
   }
 
   .container {
-    height: 100vh;
+    height: 105vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,7 +124,12 @@
   .welcome-textbox {
     width: 80%;
     padding: 15px;
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 15px;
+    transform: translateY(-22%);
+
+    @media @small-devices {
+      width: 60%;
+    }
   }
 
   // This code controls the grid class (EXPLORE. section)
@@ -193,7 +205,7 @@
         }
       }
       .about-stats {
-        height: 65vh;
+        height: 50vh;
         width: 45%;
         padding: 10px 5px 10px 10px;
         // border-top-left-radius: 15px;
@@ -206,7 +218,7 @@
 
         -webkit-position: sticky;
         position: sticky;
-        top: 65px;
+        top: 35px;
 
         i {
           width: 20px;
@@ -256,7 +268,7 @@
 
           @media (orientation: landscape) {
             justify-content: flex-end;
-            
+
             i {
               width: 15%;
             }
@@ -265,7 +277,7 @@
       }
 
       .odd {
-        background: @light;
+        background: white;
 
         i {
           color: @sec;
@@ -279,22 +291,22 @@
       }
 
       .even {
-        background: @dark;
+        background: @light;
         h2 {
-          color: white;
+          color: black;
         }
 
         i {
-          color: @light;
+          color: @tert;
         }
 
         p {
-          color: @light;
+          color: @dark;
         }
 
         span {
           i {
-            color: @light;
+            color: @dark;
           }
         }
       }
