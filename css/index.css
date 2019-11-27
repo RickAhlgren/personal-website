@@ -138,7 +138,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 5.2rem;
 }
 h2 {
   font-size: 2rem;
@@ -166,6 +166,9 @@ a {
   font-size: 1.4rem;
   line-height: 2rem;
   color: #2C3E50;
+}
+.emph-text {
+  color: black;
 }
 nav {
   width: 100%;
@@ -266,9 +269,9 @@ footer span img {
   font-weight: 1000;
 }
 .home .section-heading {
-  width: 98%;
+  width: 95%;
   color: #2C3E50;
-  transform: translateY(15px);
+  transform: translateY(20px);
   z-index: 5;
 }
 .home .section-heading .accent-punctuation {
@@ -284,6 +287,7 @@ footer span img {
 .home .frosted {
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.7) 25%, rgba(255, 255, 255, 0.7) 75%, rgba(255, 255, 255, 0.4) 100%);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 .home .welcome-textbox {
@@ -334,15 +338,15 @@ footer span img {
   color: #2C3E50;
 }
 .home #about {
-  height: 300vh;
+  height: 1500px;
 }
 .home #about .about-box {
-  padding: 15px 0 15px 15px;
+  padding: 25px 0 15px 5px;
   display: flex;
   justify-content: space-between;
 }
 .home #about .about-box .timeline-container {
-  width: 45%;
+  width: 48%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -356,9 +360,9 @@ footer span img {
   padding-left: 5px;
 }
 .home #about .about-box .about-stats {
-  height: 400px;
+  height: 65vh;
   width: 45%;
-  padding: 15px;
+  padding: 10px 5px 10px 10px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   display: flex;
@@ -366,12 +370,17 @@ footer span img {
   justify-content: space-between;
   position: -webkit-sticky;
   position: sticky;
-  top: 20px;
+  top: 65px;
+}
+.home #about .about-box .about-stats i {
+  width: 20px;
+  text-align: center;
 }
 .home #about .about-box .about-stats .fa-heart {
   color: #E74C3C;
 }
 .home #work {
+  height: 200vh;
   margin: 20px 0 40px;
 }
 .home #work .portfolio {

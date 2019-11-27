@@ -76,9 +76,9 @@
 
   // This code is for the heading of each section that overlaps the content of the section in question, accenting the heading with a colorful period
   .section-heading {
-    width: 98%;
+    width: 95%;
     color: @dark;
-    transform: translateY(15px);
+    transform: translateY(20px);
     z-index: 5;
 
     .accent-punctuation {
@@ -105,6 +105,7 @@
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
       inset 0 0 1px rgba(255, 255, 255, 0.6);
 
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
   }
 
@@ -166,14 +167,14 @@
   // This will link to a more in-depth About page
   // Buttons at the bottom should be for Resume AND Learn More
   #about {
-    height: 300vh;
+    height: 1500px;
     .about-box {
-      padding: 15px 0 15px 15px;
+      padding: 25px 0 15px 5px;
       display: flex;
       justify-content: space-between;
 
       .timeline-container {
-        width: 45%;
+        width: 48%;
         display: flex;
         flex-wrap: wrap;
         .time-line {
@@ -187,9 +188,9 @@
         }
       }
       .about-stats {
-        height: 400px;
+        height: 65vh;
         width: 45%;
-        padding: 15px;
+        padding: 10px 5px 10px 10px;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
 
@@ -199,7 +200,12 @@
 
         position: -webkit-sticky;
         position: sticky;
-        top: 20px;
+        top: 65px;
+
+        i {
+          width: 20px;
+          text-align: center;
+        }
 
         .fa-heart {
           color: @prim;
@@ -213,6 +219,7 @@
   // Keep design simple and in line with the rest of the page
   // Create a separate page that lists all of my work in aesthetically pleasing grid
   #work {
+    height: 200vh;
     margin: 20px 0 40px;
     .portfolio {
       width: 90vw;
