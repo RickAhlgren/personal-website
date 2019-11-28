@@ -11,7 +11,7 @@ html,
 body {
   // font-family: "Montserrat", sans-serif;
   // font-family: 'Roboto', sans-serif;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
@@ -45,12 +45,19 @@ a {
   }
 }
 
-p,a {
+p,
+a {
   font-size: 1.4rem;
   line-height: 2rem;
   color: @dark;
 }
 
+// This code changes the font color of text that needs to be emphasized in a dark color
 .emph-text {
   color: black;
+}
+
+// This code changes the font color of text that needs to be highlighted in a bright color
+.highlighted-text {
+  color: @prim;
 }

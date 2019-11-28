@@ -3,8 +3,8 @@
 .home {
   .logo {
     position: absolute;
-    top: 1%;
-    left: 1%;
+    top: 5px;
+    left: 5px;
     h2 {
       color: @prim;
     }
@@ -13,12 +13,16 @@
     }
 
     @media @large-devices {
-      h2 {
-        font-size: 4rem;
-      }
+      @media @large-devices-height {
+        top: 10px;
+        left: 10px;
+        h2 {
+          font-size: 4rem;
+        }
 
-      p {
-        font-size: 3rem;
+        p {
+          font-size: 3rem;
+        }
       }
     }
   }
@@ -49,6 +53,16 @@
     i {
       color: @light;
     }
+
+    @media @medium-devices {
+      @media @medium-devices-height {
+        top: 20px;
+        right: 20px;
+        i {
+          font-size: 3em;
+        }
+      }
+    }
   }
 
   /* Split the screen in half */
@@ -72,7 +86,6 @@
   .right {
     right: 0;
     height: 100vh;
-    // background-color: #3ce77b;
     background-image: url("../img/mountain-alps.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -103,6 +116,14 @@
     .accent-punctuation {
       color: @prim;
     }
+
+    @media @medium-devices {
+      @media @medium-devices-height {
+        h1 {
+          font-size: 8rem;
+        }
+      }
+    }
   }
 
   .container {
@@ -125,18 +146,8 @@
 
   .frosted {
     background: white;
-    // background: linear-gradient(
-    //   90deg,
-    //   rgba(255, 255, 255, 0.5) 0%,
-    //   rgba(255, 255, 255, 0.6) 25%,
-    //   rgba(255, 255, 255, 0.6) 75%,
-    //   rgba(255, 255, 255, 0.5) 100%
-    // );
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-      inset 0 0 1px rgba(255, 255, 255, 0.6);
-
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    inset ;
   }
 
   .welcome-textbox {
@@ -172,18 +183,22 @@
       font-weight: 1000;
     }
 
-    @media @medium-devices {
-      @media @medium-devices-height {
+    @media @small-devices {
+      @media @small-devices-height {
         height: 70%;
         width: 100%;
         align-items: center;
         .grid-item {
           width: 50%;
-          height: 50%;
+          height: 42%;
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
           align-items: center;
+
+          i {
+            font-size: 5em;
+          }
 
           .grid-text {
             display: flex;
@@ -240,12 +255,12 @@
         display: flex;
         flex-wrap: wrap;
         .time-line {
-          width: 5%;
+          width: 3%;
           border-left: 2px solid @prim;
           border-top: 2px solid @prim;
         }
         .timeline-text {
-          width: 95%;
+          width: 97%;
           padding-left: 5px;
         }
       }
@@ -253,15 +268,13 @@
         height: 50vh;
         width: 45%;
         padding: 10px 5px 10px 10px;
-        // border-top-left-radius: 15px;
-        // border-bottom-left-radius: 15px;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+        border-bottom-left-radius: 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         -webkit-position: sticky;
         position: sticky;
-        top: 35px;
+        top: 25%;
 
         i {
           width: 20px;
@@ -273,34 +286,41 @@
         }
 
         @media @small-devices {
-          height: 250px;
-          border-radius: 15px;
+          height: 200px;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 15px;
         }
 
-        @media @large-devices {
-          top: 20%;
+        @media @small-devices-height {
+          height: 250px;
         }
+
+        // @media @medium-devices-height {
+        //   top: 30%;
+        // }
       }
     }
-
-    // @media @medium-devices {
-    //   @media @medium-devices-height {
-    //     height: 1300px;
-    //   }
-    // }
   }
 
   // Here is the code for the portfolio (WORK.) section
   // The goal with this section is to highlight a few of the projects I've worked on
-  // Keep design simple and in line with the rest of the page
   // Create a separate page that lists all of my work in aesthetically pleasing grid
   #work {
     height: 200vh;
-    // margin: 20px 0 40px;
+
+    @media @medium-devices {
+      @media @medium-devices-height {
+        height: 120vh;
+      }
+    }
+
+    // This code is for the portfolio section as whole, excluding the WRK. heading
     .portfolio {
       width: 90%;
       margin: 0 auto;
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+
+      // This code is for each individual piece highlighted in the portfolio
       .portfolio-piece {
         height: 90vh;
         margin: 0 auto;
@@ -316,12 +336,16 @@
           text-align: center;
           font-size: 2.5rem;
         }
-
+        span {
+          i {
+            color: @dark;
+          }
+        }
         i {
           text-align: center;
         }
 
-        span {
+        .work-links {
           display: flex;
           justify-content: space-around;
 
@@ -333,22 +357,23 @@
             }
           }
         }
-      }
 
-      .odd {
-        background: white;
-
-        i {
-          color: @sec;
-        }
-
-        span {
-          i {
-            color: @dark;
+        @media @medium-devices {
+          @media @medium-devices-height {
+            height: 50vh;
           }
         }
       }
 
+      // This code styles the first and every other portfolio piece
+      .odd {
+        background: white;
+        i {
+          color: @sec;
+        }
+      }
+
+      // This code styles the second and every other portfolio piece
       .even {
         background: @light;
         h2 {
@@ -361,12 +386,6 @@
 
         p {
           color: @dark;
-        }
-
-        span {
-          i {
-            color: @dark;
-          }
         }
       }
     }
@@ -423,6 +442,25 @@
 
     @media (orientation: landscape) {
       height: 100vh;
+    }
+
+    @media @medium-devices {
+      @media @medium-devices-height {
+        height: 50vh;
+        h5 {
+          font-size: 1.5rem;
+        }
+        a,
+        p {
+          font-size: 1.5rem;
+        }
+        i {
+          font-size: 4rem;
+        }
+        .contact-box {
+          width: 50vw;
+        }
+      }
     }
   }
 }
