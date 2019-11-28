@@ -11,6 +11,16 @@
     p {
       color: @dark;
     }
+
+    @media @large-devices {
+      h2 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 3rem;
+      }
+    }
   }
 
   // This code positions the scroll arrow icon
@@ -19,6 +29,11 @@
     position: absolute;
     right: 14px;
     bottom: 10px;
+
+    @media @medium-devices {
+      right: 52%;
+      bottom: 3%;
+    }
   }
 
   // This is the code for the floating button in the top right corner
@@ -88,21 +103,24 @@
     .accent-punctuation {
       color: @prim;
     }
-    @media @small-devices {
-      width: 85%;
-    }
-  }
-
-  .welkum {
-    transform: translateY(-8%);
   }
 
   .container {
-    height: 105vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media @small-devices {
+      width: 75vw;
+      margin: 0 auto;
+    }
+
+    @media @large-devices {
+      width: 50vw;
+      margin: 0 auto;
+    }
   }
 
   .frosted {
@@ -125,7 +143,6 @@
     width: 80%;
     padding: 15px;
     border-bottom-right-radius: 15px;
-    transform: translateY(-22%);
 
     @media @small-devices {
       width: 60%;
@@ -133,35 +150,57 @@
   }
 
   // This code controls the grid class (EXPLORE. section)
+  #explore {
+    @media @medium-devices {
+      @media @medium-devices-height {
+        height: 70vh;
+      }
+    }
+  }
+
   .grid {
     height: 70%;
     width: 90%;
     margin: 0 auto;
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
     border-bottom-right-radius: 10px;
     z-index: 0;
-
-    @media (orientation: landscape) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      .grid-item {
-        width: 50%;
-        display: flex;
-        align-items: center;
-      }
-    }
-
     h3 {
       font-weight: 1000;
+    }
+
+    @media @medium-devices {
+      @media @medium-devices-height {
+        height: 70%;
+        width: 100%;
+        align-items: center;
+        .grid-item {
+          width: 50%;
+          height: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          .grid-text {
+            display: flex;
+            h3 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+            }
+          }
+        }
+      }
     }
 
     // This code controls the individual items within the grid class
     .grid-item {
       display: flex;
-      flex-direction: row;
       .icon-container {
         width: 40%;
         display: flex;
@@ -171,10 +210,16 @@
           color: @prim;
         }
       }
-
       .grid-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 60%;
         color: @dark;
+      }
+
+      @media (orientation: landscape) {
+        width: 50%;
       }
     }
   }
@@ -184,7 +229,7 @@
   // This will link to a more in-depth About page
   // Buttons at the bottom should be for Resume AND Learn More
   #about {
-    height: 1500px;
+    height: 1280px;
     .about-box {
       padding: 25px 0 15px 5px;
       display: flex;
@@ -211,11 +256,9 @@
         // border-top-left-radius: 15px;
         // border-bottom-left-radius: 15px;
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
-
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
         -webkit-position: sticky;
         position: sticky;
         top: 35px;
@@ -228,8 +271,23 @@
         .fa-heart {
           color: @prim;
         }
+
+        @media @small-devices {
+          height: 250px;
+          border-radius: 15px;
+        }
+
+        @media @large-devices {
+          top: 20%;
+        }
       }
     }
+
+    // @media @medium-devices {
+    //   @media @medium-devices-height {
+    //     height: 1300px;
+    //   }
+    // }
   }
 
   // Here is the code for the portfolio (WORK.) section
@@ -238,13 +296,14 @@
   // Create a separate page that lists all of my work in aesthetically pleasing grid
   #work {
     height: 200vh;
-    margin: 20px 0 40px;
+    // margin: 20px 0 40px;
     .portfolio {
-      width: 90vw;
+      width: 90%;
       margin: 0 auto;
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
       .portfolio-piece {
         height: 90vh;
+        margin: 0 auto;
         padding: 15px;
         display: flex;
         flex-direction: column;
