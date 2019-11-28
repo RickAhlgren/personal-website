@@ -146,8 +146,7 @@
 
   .frosted {
     background: white;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
-    inset ;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
   }
 
   .welcome-textbox {
@@ -394,16 +393,27 @@
   // Here is the code for the contact (CONTACT.) section
   #contact {
     height: 75vh;
+    .contakt {
+      @media @medium-devices {
+        @media @medium-devices-height {
+          width: 98vw;
+        }
+      }
+    }
     .contact-box {
       height: 90%;
       width: 100vw;
       display: flex;
       flex-direction: column;
+
+      // This is the code for each row of contact information
       .individual-contact-info {
         height: 25%;
         display: flex;
         flex-direction: row;
         border-bottom: 1px solid @light;
+
+        // Within each row, this is the code for the title (Address, Phone, etc)
         .contact-category-title {
           width: 50%;
           display: flex;
@@ -411,6 +421,7 @@
           align-items: center;
         }
 
+        // Within each row, this is the code for the respective text (my address, my phone number, my email, my social media links)
         .contact-category-text {
           width: 50%;
           display: flex;
@@ -418,6 +429,7 @@
           justify-content: center;
           align-items: center;
 
+          // This code changes the color of my email address
           a {
             color: @prim;
           }
@@ -434,6 +446,11 @@
               @media (orientation: landscape) {
                 width: 20%;
               }
+              @media @medium-devices {
+                @media @medium-devices-height {
+                  width: 20%;
+                }
+              }
             }
           }
         }
@@ -446,7 +463,7 @@
 
     @media @medium-devices {
       @media @medium-devices-height {
-        height: 50vh;
+        height: 40vh;
         h5 {
           font-size: 1.5rem;
         }
@@ -456,9 +473,6 @@
         }
         i {
           font-size: 4rem;
-        }
-        .contact-box {
-          width: 50vw;
         }
       }
     }
