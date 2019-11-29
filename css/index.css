@@ -308,11 +308,9 @@ footer span img {
 .home .button {
   padding: 8px 40px;
   font-size: larger;
-  border-radius: 5px;
   background: #e74c3c;
   color: white;
   font-weight: 1000;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .home .section-heading {
   width: 95vw;
@@ -425,19 +423,20 @@ footer span img {
 }
 @media (min-width: 576px) and (min-height: 576px) {
   .home .grid {
-    height: 70%;
+    height: 50%;
     width: 100%;
     align-items: center;
   }
 }
 @media (min-width: 992px) {
   .home .grid {
-    padding: 1%;
+    padding: 2%;
     height: 30%;
   }
 }
 .home .grid .grid-item {
   display: flex;
+  width: 100%;
 }
 @media (orientation: landscape) {
   .home .grid .grid-item {
@@ -450,7 +449,7 @@ footer span img {
     height: 42%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
   .home .grid .grid-item i {
@@ -464,6 +463,7 @@ footer span img {
   }
 }
 .home .grid .grid-item .icon-container {
+  height: auto;
   width: 30%;
   display: flex;
   justify-content: center;
@@ -471,6 +471,10 @@ footer span img {
 }
 .home .grid .grid-item .icon-container i {
   color: #e74c3c;
+}
+.home .grid .grid-item .icon-container i:hover {
+  color: #FF6C5C;
+  font-size: 9rem;
 }
 .home .grid .grid-item .grid-text {
   width: 70%;
@@ -481,7 +485,7 @@ footer span img {
 }
 @media (min-width: 576px) and (min-height: 576px) {
   .home .grid .grid-item .grid-text {
-    display: flex;
+    justify-content: flex-start;
   }
   .home .grid .grid-item .grid-text h3 {
     text-align: center;
@@ -493,7 +497,6 @@ footer span img {
 @media (min-width: 992px) {
   .home .grid .grid-item .grid-text {
     height: 40%;
-    justify-content: flex-start;
   }
 }
 .home #about {
@@ -540,6 +543,7 @@ footer span img {
 @media (min-width: 576px) {
   .home #about .about-box .about-stats {
     height: 200px;
+    border-top-right-radius: 15px;
   }
 }
 @media (min-height: 576px) {
