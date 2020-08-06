@@ -1,0 +1,581 @@
+// Home Page Styles here
+
+.home {
+  .logo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    h2 {
+      color: @prim;
+    }
+    p {
+      color: @dark;
+    }
+
+    // This media query slightly shifts the position and increases the font size of my name in the top left corner to be more visible on larger devices with a minimum height AND width, as using just a width media query applies it to smaller devices once in landscape orientation
+    @media @large-devices {
+      @media @large-devices-height {
+        top: 10px;
+        left: 10px;
+        h2 {
+          font-size: 4rem;
+        }
+
+        p {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  // This code positions the scroll arrow icon
+  .scroll-arrow {
+    color: @prim;
+    position: absolute;
+    right: 14px;
+    bottom: 10px;
+
+    // This media query shifts the scroll arrow from the bottom right corner to the center, making it more obvious on wider displays
+    @media @medium-devices {
+      right: 52%;
+      bottom: 3%;
+    }
+  }
+
+  .break {
+    flex-basis: 15%;
+  }
+
+  // This is the code for the floating button in the top right corner
+  .menu-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: @dark;
+    border-radius: 50%;
+    z-index: 2;
+
+    i {
+      color: @light;
+    }
+
+    // This code increases the size of the floating icon in the top right corner to be more visible on larger devices with a minimum height AND width, as using just a width media query applies it to smaller devices once in landscape orientation
+    @media @medium-devices {
+      @media @medium-devices-height {
+        top: 20px;
+        right: 20px;
+        i {
+          font-size: 3em;
+        }
+      }
+    }
+  }
+
+  /* Split the screen in half */
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: -3;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: @light;
+  }
+
+  /* Control the right side */
+  .right {
+    right: 0;
+    height: 100vh;
+    background-image: url("../img/mountain-alps.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  // Here is the code for the red button, as seen at the bottom of the timeline
+  .button {
+    padding: 8px 40px;
+    font-size: larger;
+    background: @prim;
+    color: white;
+    font-weight: 1000;
+  }
+
+  // This code is for the heading of each section that overlaps the content of the section in question, accenting the text with a colorful period
+  .section-heading {
+    width: 95vw;
+    color: @dark;
+    z-index: 5;
+    transform: translateY(20px);
+
+    .accent-punctuation {
+      color: @prim;
+    }
+
+    // This media query increases the font size of the overlapping section headings to
+    @media @small-devices {
+      @media @small-devices-height {
+        width: 75vw;
+        transform: translateY(22px);
+        h1 {
+          font-size: 8rem;
+        }
+      }
+    }
+
+    @media @large-devices {
+        width: 50vw;
+    }
+  }
+
+  // This media query shifts the WELKUM text to closer to the center on anything larger than a small device on portrait orientation
+  .welkum {
+    @media (orientation: landscape) {
+      width: 50vw;
+    }
+
+    @media @small-devices {
+      width: 65vw;
+    }
+
+    @media @medium-devices {
+      width: 55vw;
+      transform: translateY(25px);
+    }
+
+    @media @large-devices {
+      width: 40vw;
+    }
+  }
+
+  // This code makes each section 100% of the view height, or "1 page" for cleanliness (unless otherwise specified by id tag properties)
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    // This media query shrinks the width of each container to keep the content from stretching too much horizontally as the display width keeps increasing
+    @media @small-devices {
+      @media @small-devices-height {
+        width: 75vw;
+        margin: 0 auto;
+      }
+    }
+
+    // Same as above
+    @media @large-devices {
+      width: 50vw;
+      margin: 0 auto;
+    }
+  }
+
+  // This code applies consistent styling to all applicable text boxes
+  .text-box-styling {
+    background: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  // This code is for the text box on the first "page"
+  .welcome-textbox {
+    width: 80%;
+    padding: 15px;
+
+    @media @small-devices {
+      width: 60%;
+    }
+  }
+
+  // This code resizes the height of the EXPLORE box to be cleaner on medium devices (768px x 768px) and up
+  #explore {
+    @media @medium-devices {
+      @media @medium-devices-height {
+        height: 90vh;
+      }
+    }
+
+    @media @large-devices {
+      width: 90vw;
+    }
+  }
+
+  .exp-lore {
+    width: 95vw;
+  }
+
+  .grid {
+    height: 70%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 0;
+    h3 {
+      font-weight: 1000;
+    }
+
+    @media (orientation: landscape) {
+      width: 90%;
+    }
+
+    // This code resizes the grid class for anything larger than a small square display (576px x 576px)
+    @media @small-devices {
+      @media @small-devices-height {
+        height: 50%;
+        width: 100%;
+        align-items: center; 
+      }
+    }
+    // This code resizes the grid class for anything larger than a medium square display (768px x 768px)
+    // @media @medium-devices {
+    //   @media @medium-devices-height {
+    //     height: 70%;
+    //     width: 100%;
+    //     align-items: center; 
+    //   }
+    // }
+
+    @media @large-devices {
+      padding: 2%;
+      height: 30%;
+    }
+
+    // This code controls the individual items within the grid class
+    // This applies to the EXPLORE section
+    .grid-item {
+      display: flex;
+      width: 100%;
+
+      // This media query changes the width of each grid item so they sit side-by-side on landscape orientation
+      @media (orientation: landscape) {
+        width: 50%;
+      }
+
+      // This media query resizes the individual items within the grid class to tighten up the spacing once the display size grows, as well as rearrange the contents within each item to stack vertically
+      @media @small-devices {
+        @media @small-devices-height {
+          width: 50%;
+          height: 42%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+
+          i {
+            font-size: 5em;
+          }
+        }
+      }
+
+      @media @large-devices {
+        width: 25%;
+        height: 100%;
+      }
+
+      // This code sets the size of the elements containing the icons to a % of the grid-item so that they fall inline with one another vertically and half equal spacing with the grid-text
+      .icon-container {
+        height: auto;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          color: @prim;
+          &:hover {
+            color: @prim-highlight;
+            font-size: 9rem;
+          }
+        }
+      }
+
+      .grid-text {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: @dark;
+
+        // This code centers the text within each grid-item after the icons and text are rearranged to be vertically stacked
+        @media @small-devices {
+          @media @small-devices-height {
+            justify-content: flex-start;
+            h3 {
+              text-align: center;
+            }
+            p {
+              text-align: center;
+            }
+          }
+        }
+
+        @media @large-devices {
+          height: 40%;
+          // justify-content: flex-start;
+        }
+      }
+    }
+  }
+
+  // This code is for the About (BIO.) section
+  // The goal for this section is to reveal a few details about me and my work history
+  // This will link to a more in-depth About page
+  #about {
+    height: 1440px;
+
+    // This code is for the container holding the timeline on the left and the stats box on the right
+    .about-box {
+      padding: 25px 0 15px 5px;
+      display: flex;
+      justify-content: space-between;
+
+      .timeline-container {
+        width: 48%;
+        display: flex;
+        flex-wrap: wrap;
+        .time-line {
+          width: 3%;
+          border-left: 2px solid @prim;
+          border-top: 2px solid @prim;
+        }
+        .timeline-text {
+          width: 97%;
+          padding-left: 5px;
+        }
+      }
+      .about-stats {
+        height: 50vh;
+        width: 45%;
+        padding: 10px 5px 10px 10px;
+        border-top-right-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        -webkit-position: sticky;
+        position: sticky;
+        top: 25%;
+
+        i {
+          width: 20px;
+          text-align: center;
+        }
+
+        .fa-heart {
+          color: @prim;
+        }
+
+        @media @small-devices {
+          height: 200px;
+          border-top-right-radius: 15px;
+        }
+
+        @media @small-devices-height {
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  // Here is the code for the portfolio (WORK.) section
+  // The goal with this section is to highlight a few of the projects I've worked on
+  // Create a separate page that lists all of my work in aesthetically pleasing grid
+  #work {
+    height: 200vh;
+
+    @media @medium-devices {
+      @media @medium-devices-height {
+        height: 120vh;
+      }
+    }
+
+    // This code is for the portfolio section as whole, excluding the WRK. heading
+    .portfolio {
+      width: 90%;
+      margin: 0 auto;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+
+      // This code is for each individual piece highlighted in the portfolio
+      .portfolio-piece {
+        height: 90vh;
+        margin: 0 auto;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        p {
+          text-align: center;
+        }
+
+        h2 {
+          text-align: center;
+          font-size: 2.5rem;
+        }
+        span {
+          i {
+            color: @dark;
+          }
+        }
+        i {
+          text-align: center;
+        }
+
+        // This code is for the GitHub and Hyperlink icons at the bottom of each portfolio piece
+        .work-links {
+          display: flex;
+          justify-content: space-around;
+
+          @media (orientation: landscape) {
+            justify-content: flex-end;
+
+            i {
+              width: 15%;
+            }
+          }
+        }
+
+        // This media query changes the height of each portfolio piece for medium devices and larger (768px x 768px and up)
+        @media @medium-devices {
+          @media @medium-devices-height {
+            height: 50vh;
+          }
+        }
+      }
+
+      // This code styles the first and every other portfolio piece
+      .odd {
+        background: white;
+        i {
+          color: @sec;
+        }
+      }
+
+      // This code styles the second and every other portfolio piece
+      .even {
+        background: @light;
+        h2 {
+          color: black;
+        }
+
+        i {
+          color: @tert;
+        }
+
+        p {
+          color: @dark;
+        }
+      }
+    }
+  }
+
+  // Here is the code for the contact (CONTACT.) section
+  #contact {
+    height: 55vh;
+
+    @media (orientation: landscape) {
+      height: 100vh;
+    }
+
+    @media @small-devices-height {
+      height: 40vh;
+    }
+
+    @media @medium-devices-height {
+      height: 35vh;
+    }
+
+    @media @medium-devices {
+      @media @medium-devices-height {
+        width: 50%;
+        height: 40vh;
+        h5 {
+          font-size: 1.5rem;
+        }
+        a,
+        p {
+          font-size: 1.5rem;
+        }
+        i {
+          font-size: 4rem;
+        }
+      }
+    }
+
+    // This class is for the section heading specifically, to force it off to the side so it's not in the way and breaking the flow
+    .contakt {
+      @media (orientation: landscape) {
+        width: 50vw;
+      }
+    }
+
+    // This code controls the container encompassing my contact information
+    .contact-box {
+      height: 90%;
+      width: 90vw;
+      display: flex;
+      flex-direction: column;
+      border-radius: 0;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+
+      @media (orientation: landscape) {
+        width: 50vw;
+      }
+
+      @media @small-devices {
+        width: 60vw;
+      }
+
+      @media @medium-devices {
+        width: 40vw;
+      }
+
+      // This is the code for each row of contact information
+      .individual-contact-info {
+        height: 25%;
+        display: flex;
+        flex-direction: row-reverse;
+
+        // Within each row, this is the code for the respective text (my address, my phone number, my email, my social media links)
+        .contact-text {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          // This code changes the color of my email address
+          a {
+            color: @prim;
+          }
+
+          span {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .social-icon {
+              width: 15%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
