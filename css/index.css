@@ -591,6 +591,13 @@ footer span img {
   justify-content: space-between;
 }
 
+.home #blog .blog-box {
+  padding: 25px 0 15px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .home #about .about-box .timeline-container {
   width: 48%;
   display: flex;
@@ -695,7 +702,7 @@ footer span img {
     justify-content: flex-end;
   }
 
-  .home #work .portfolio .portfolio-piece .work-links i {
+  .home #work .portfolio .portfolio-piece .work-links a {
     width: 15%;
   }
 }
