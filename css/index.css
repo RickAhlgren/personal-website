@@ -656,7 +656,7 @@ footer span img {
 
 @media (min-width: 768px) and (min-height: 768px) {
   .home #work {
-    height: 180vh;
+    height: 240vh;
   }
 }
 
