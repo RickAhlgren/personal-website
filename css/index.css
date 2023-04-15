@@ -765,7 +765,7 @@ footer span img {
     font-size: 1.5rem;
   }
 
-  .home #contact a,
+  .home #contact #email,
   .home #contact p {
     font-size: 1.5rem;
   }
@@ -823,7 +823,7 @@ footer span img {
   align-items: center;
 }
 
-.home #contact .contact-box .individual-contact-info .contact-text a {
+.home #contact .contact-box .individual-contact-info .contact-text #email {
   color: #e74c3c;
 }
 
@@ -845,3 +845,4 @@ footer span img {
   width: 15%;
   text-align: center;
 }
+
